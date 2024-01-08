@@ -5,4 +5,4 @@ The investment calculator calculates the amount of interest the user will earn o
 
 The home loan repayment calculator calculates the amount the user will have to pay on a home loan, on a monthly basis.
 
-Skills used: Conditional and loop statements, mathematical operations, error handling, project documentation.
+Skills used: Conditional and loop statements, functions, mathematical operations, error handling, project documentation.
