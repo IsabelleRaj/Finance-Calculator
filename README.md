@@ -26,23 +26,23 @@ Skills used: Conditional and loop statements, functions, mathematical operations
 
 ## 2. Usage
 1. Running the program will prompt the user with the menu, of which they can choose either the investment or bond (home loan repayment) calculator.
-   
-![image](https://github.com/IsabelleRaj/finalCapstone/assets/119440782/2d62cae7-cf1a-4b44-9f9b-0c0635b8b5bc)
+
+![image](https://github.com/IsabelleRaj/finance-calculator/assets/119440782/5f95fd48-b81b-4265-a237-2ecc6849e340)
 
 2. If the user chooses the 'investment' calculator, they will be asked to input the following details:
    - Amount deposited (£)
    - Interest rate (%)
    - Years of investment
    - Simple or compound interest
-   
-![image](https://github.com/IsabelleRaj/finalCapstone/assets/119440782/ccd7618c-d253-46c3-8a8b-10b2963b4806)
+
+![image](https://github.com/IsabelleRaj/finance-calculator/assets/119440782/25d1d92a-a93b-4592-b231-851e12bceee5)
 
 3. If the user chooses the 'bond' calculator, they will be asked to input the following details:
    - Present house value (£)
    - Interest rate (%)
    - Months of bond repayment
-   
-![image](https://github.com/IsabelleRaj/finalCapstone/assets/119440782/186d5edc-0fbd-4d6f-be64-6b80f803c34c)
+
+![image](https://github.com/IsabelleRaj/finance-calculator/assets/119440782/f2cd6718-c095-4195-bf15-447ae1548f93)
 
 4. The program will repeat until the user chooses to 'quit'. 
 
