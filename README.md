@@ -15,13 +15,14 @@ Skills used: Conditional and loop statements, functions, mathematical operations
 ## 1. Installation
 1. Open your terminal/command prompt.
    
-3. Navigate to your desired directory.
+2. Navigate to your desired directory.
    
-5. Execute the following 'wget' command to download the Python file.
-   
+3. Git clone this repository using the following command:
+
    ```bash
-   wget https://raw.githubusercontent.com/IsabelleRaj/finalCapstone/main/finance_calculator_capstone.py
+   git clone https://github.com/IsabelleRaj/finance-calculator
    ```
+4. Run the finance_calculator.py file.
 
 ## 2. Usage
 1. Running the program will prompt the user with the menu, of which they can choose either the investment or bond (home loan repayment) calculator.
