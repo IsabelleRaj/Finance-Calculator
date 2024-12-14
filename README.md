@@ -1,50 +1,59 @@
-# Finance Calculator
-A Python program which allows the user to access two different financial calculators: **an investment calculator** and a **home loan repayment calculator**.
-
-- The investment calculator calculates the amount of interest the user will earn on their investment. The user can specify either simple or compound interest. 
-
-- The home loan repayment calculator calculates the amount the user will have to pay on a home loan, on a monthly basis.
-
-Skills used: Conditional and loop statements, functions, mathematical operations, error handling, project documentation.
+# Finance Calculator 📊
 
 ## Table of Contents
-1. Installation
-2. Usage
-3. Authors
+1. [Project Description](#project-description)
+2. [Requirements](#requirements)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Acknowledgments](#acknowledgement)
 
-## 1. Installation
+## Project Description
+
+In this project, a simple streamlit app was created for performing financial calculations, including:
+- **Mortgage Calculator**: Calculate monthly repayments for a home loan.
+- **Investment Calculator**: Calculate future investment returns based on simple or compound interest.
+
+This app was designed with an intuitive and user-friendly interface to help users make informed financial decisions with ease.
+
+## Requirements
+To run this app, you will need the following:
+- Python
+- Required dependencies (downloaded during installation)
+  - `streamlit==1.41.1`
+  - `math`
+    
+## Installation
+The app can be run either locally or using the web-browser.
+
+**To run this app locally, follow these steps:**
 1. Open your terminal/command prompt.
-   
 2. Navigate to your desired directory.
-   
-3. Git clone this repository using the following command:
-
+3. Git clone this repository:
    ```bash
-   git clone https://github.com/IsabelleRaj/finance-calculator
+   git clone https://github.com/IsabelleRaj/Finance-Calculator
    ```
-4. Run the finance_calculator.py file.
+4. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Launch the streamlit app:
+   ```bash
+   streamlit run streamlit_calc_app.py
+   ```
+
+**To launch the deployed app:**
+1. Visit this link: [Streamlit Finance Calculator](https://finance-calculator-isabelleraj.streamlit.app/)
 
 ## 2. Usage
-1. Running the program will prompt the user with the menu, of which they can choose either the investment or bond (home loan repayment) calculator.
+Here are the features of this app:
+- **Mortgage Calculator**:
+  - Enter the loan amount, yearly interest rate, and repayment period.
+  - Calculates monthly repayments instantly.
+- **Investment Calculator**:
+  - Enter the deposit amount, yearly interest rate, and time period.
+  - Choose between simple and compound interest.
+  - Calculates the total amount at the end of the investment period.
 
-![image](https://github.com/IsabelleRaj/finance-calculator/assets/119440782/5f95fd48-b81b-4265-a237-2ecc6849e340)
 
-2. If the user chooses the 'investment' calculator, they will be asked to input the following details:
-   - Amount deposited (£)
-   - Interest rate (%)
-   - Years of investment
-   - Simple or compound interest
-
-![image](https://github.com/IsabelleRaj/finance-calculator/assets/119440782/25d1d92a-a93b-4592-b231-851e12bceee5)
-
-3. If the user chooses the 'bond' calculator, they will be asked to input the following details:
-   - Present house value (£)
-   - Interest rate (%)
-   - Months of bond repayment
-
-![image](https://github.com/IsabelleRaj/finance-calculator/assets/119440782/f2cd6718-c095-4195-bf15-447ae1548f93)
-
-4. The program will repeat until the user chooses to 'quit'. 
-
-## 3. Authors
-This project was written by me ([@IsabelleRaj](https://github.com/IsabelleRaj)) as part of the DfE Skills Bootcamp in Data Science by [HyperionDev](https://www.hyperiondev.com/).
+## 3. Acknowledgments
+This project was written by me ([@IsabelleRaj](https://github.com/IsabelleRaj)).
