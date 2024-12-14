@@ -58,4 +58,4 @@ Here is a demonstration of the app:
 <img src="calc_app_demo.gif" width="400" height="450">
 
 ## 3. Acknowledgments
-This project was written by me ([@IsabelleRaj](https://github.com/IsabelleRaj)).
+This project was written by me ([@IsabelleRaj](https://github.com/IsabelleRaj)). The app was created and deployed using [Streamlit](https://streamlit.io/).
