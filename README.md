@@ -17,10 +17,9 @@ This app was designed with an intuitive and user-friendly interface to help user
 
 ## Requirements
 To run this app, you will need the following:
-- Python
+- `Python`
 - Required dependencies (downloaded during installation)
   - `streamlit==1.41.1`
-  - `math`
     
 ## Installation
 The app can be run either locally or using the web-browser.
