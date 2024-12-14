@@ -52,7 +52,9 @@ Here are the features of this app:
   - Enter the deposit amount, yearly interest rate, and time period.
   - Choose between simple and compound interest.
   - Calculates the total amount at the end of the investment period.
-
+ 
+Here is a quick demo example:
+![Demo](Finance_calculator_streamlit_demo.gif)
 
 ## 3. Acknowledgments
 This project was written by me ([@IsabelleRaj](https://github.com/IsabelleRaj)).
