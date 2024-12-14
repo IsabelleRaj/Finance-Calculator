@@ -54,7 +54,8 @@ Here are the features of this app:
   - Calculates the total amount at the end of the investment period.
  
 Here is a quick demo example:
-![Demo](Finance_calculator_streamlit_demo.gif)
+
+<img src="Finance_calculator_streamlit_demo.gif" width="800" height="450">
 
 ## 3. Acknowledgments
 This project was written by me ([@IsabelleRaj](https://github.com/IsabelleRaj)).
