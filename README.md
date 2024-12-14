@@ -55,7 +55,7 @@ Here are the features of this app:
  
 Here is a quick demo example:
 
-<img src="calc_app_demo.gif" width="400" height="450">
+<img src="calc_app_demo.gif" width="800" height="450">
 
 ## 3. Acknowledgments
 This project was written by me ([@IsabelleRaj](https://github.com/IsabelleRaj)).
