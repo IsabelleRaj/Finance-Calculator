@@ -53,7 +53,7 @@ Here are the features of this app:
   - Choose between simple and compound interest.
   - Calculates the total amount at the end of the investment period.
  
-Here is a quick demo example:
+Here is a demonstration of the app:
 
 <img src="calc_app_demo.gif" width="800" height="450">
 
