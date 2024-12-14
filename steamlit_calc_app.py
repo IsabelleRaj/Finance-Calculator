@@ -52,7 +52,7 @@ with st.container(border = True):
         i = i/12 # Convert from yearly to monthly rate
         
         # n = The number of months over which the bond will be repaid
-        n = st.number_input("Enter the amount of years you plan to repay the bond:", min_value= 0.0, format = "%0.1f")
+        n = st.number_input("Enter the amount of years you plan to repay the mortgage:", min_value= 0.0, format = "%0.1f")
         n = n*12
 
         # Calculate monthly repayment
@@ -100,6 +100,7 @@ with st.container(border = True):
         # Request user input for the type of interest
         option = st.selectbox("Choose from the interest type: ", options=['Simple', 'Compound'], index=0)
 
+        # Calculate and display simple interest
         if option == 'Simple':
             if st.button("Calculate", type="primary"):
                 # A = Total amount with added simple interest
@@ -107,12 +108,10 @@ with st.container(border = True):
                 st.markdown(f"Your total amount with applied simple interest is:")
                 st.subheader(f":white_check_mark: :green-background[£{A:.2f}]")
         
+             # Calculate and display compound interest
         else:
             if st.button("Calculate", type="primary"):
                 # A = Total amount with added compound interest
                 A = round(P * math.pow((1+r), t),2) 
                 st.markdown(f"Your total amount with applied compound interest is:")
                 st.subheader(f":white_check_mark: :green-background[£{A:.2f}]")
-
-# streamlit run "g:/My Drive/Personal Portfolio Projects/Finance Calculator/steamlit_app.py"
-
