@@ -97,7 +97,7 @@ with st.container(border = True):
 
         # Input fields for the investment calculator
         # P = The amount deposited
-        P = st.number_input("Enter the amount of money you are depositing (£):", min_value = 0.00, format = "%0.2f", step = 1.00)
+        P = st.number_input("Enter the amount of money you are depositing (£):", min_value = 0.00, format = "%0.2f", step = 100.00)
         
         # r = yearly interest rate
         r = st.number_input("Enter your yearly interest rate (%):", min_value= 0.00, format = "%0.2f", step = 1.00)/100
