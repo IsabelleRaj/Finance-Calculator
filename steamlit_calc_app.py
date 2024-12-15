@@ -49,10 +49,11 @@ with st.container(border = True):
         P = st.number_input("Enter the present value of the house (£):", min_value = 0.00, format = "%0.2f", step = 100.00)
 
         # d = Deposit amount (£)
-        d = st.number_input("Enter your deposit amount (£)", min_value = 0.00, format = "%0.2f", step = 100.00)
+        d = st.number_input("Enter your deposit amount (£)", min_value = 0.00, format = "%0.2f", step = 100.00, )
         # Display the deposit amount as a percentage
-        d_perc = (d/P)* 100
-        st.markdown(f"You have chosen to deposit **{d_perc}%**.")
+        if P != 0:
+            d_perc = (d/P)* 100
+            st.markdown(f"You have chosen to deposit **{d_perc}%**.")
 
         # i = Monthly interest rate
         i = st.number_input("Enter your yearly interest rate (%):", min_value= 0.00, format = "%0.2f", step = 1.00)/100
@@ -94,7 +95,7 @@ with st.container(border = True):
                         - _t_ = Number of years the money is invested  
                 """)
 
-        # Input fields for the mortgage calculator
+        # Input fields for the investment calculator
         # P = The amount deposited
         P = st.number_input("Enter the amount of money you are depositing (£):", min_value = 0.00, format = "%0.2f", step = 1.00)
         
