@@ -34,7 +34,7 @@ with st.container(border = True):
         # Display the repayment equation if toggle is on
         if st.toggle("Display formula"):
             st.latex(r"""
-                    \text{Monthly Repayment} = \frac{i \cdot \left(P - d)\right)}{1 - (1 + i)^{-n}}
+                    \text{Monthly Repayment} = \frac{i \cdot \left(P - d)\right}{1 - (1 + i)^{-n}}
             """)
             st.markdown("""
                     Where:
