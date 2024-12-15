@@ -45,14 +45,14 @@ with st.container(border = True):
 
         # Input fields for the mortgage calculator
         # P = Present value of the house
-        P = st.number_input("Enter the present value of the house (£):", min_value = 0.00, format = "%0.2f")
+        P = st.number_input("Enter the present value of the house (£):", min_value = 0.00, format = "%0.2f", step = 100.00)
         
         # i = Monthly interest rate
-        i = st.number_input("Enter your yearly interest rate (%):", min_value= 0.0, format = "%0.1f")/100
+        i = st.number_input("Enter your yearly interest rate (%):", min_value= 0.0, format = "%0.1f", , step = 1.0)/100
         i = i/12 # Convert from yearly to monthly rate
         
         # n = The number of months over which the bond will be repaid
-        n = st.number_input("Enter the amount of years you plan to repay the mortgage:", min_value= 0.0, format = "%0.1f")
+        n = st.number_input("Enter the amount of years you plan to repay the mortgage:", min_value= 0.0, max_value = 100.0, format = "%0.1f", , step = 1.00)
         n = n*12
 
         # Calculate monthly repayment
@@ -89,13 +89,13 @@ with st.container(border = True):
 
         # Input fields for the mortgage calculator
         # P = The amount deposited
-        P = st.number_input("Enter the amount of money you are depositing (£):", min_value = 0.00, format = "%0.2f")
+        P = st.number_input("Enter the amount of money you are depositing (£):", min_value = 0.00, format = "%0.2f", , step = 1.00)
         
         # r = yearly interest rate
-        r = st.number_input("Enter your yearly interest rate (%):", min_value= 0.0, format = "%0.1f")/100
+        r = st.number_input("Enter your yearly interest rate (%):", min_value= 0.0, format = "%0.1f", , step = 1.0)/100
         
         # t = The amount of years planned to invest
-        t = st.number_input("Enter the amount of years you plan to invest:", min_value= 0.0, format = "%0.1f")
+        t = st.number_input("Enter the amount of years you plan to invest:", min_value= 0.0, format = "%0.1f", , step = 1.0)
 
         # Request user input for the type of interest
         option = st.selectbox("Choose from the interest type: ", options=['Simple', 'Compound'], index=0)
