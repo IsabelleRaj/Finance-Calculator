@@ -52,7 +52,7 @@ with st.container(border = True):
         d = st.number_input("Enter your deposit amount (£)", min_value = 0.00, format = "%0.2f", step = 100.00, )
         # Display the deposit amount as a percentage
         if P != 0:
-            d_perc = (d/P)* 100
+            d_perc = round((d/P)* 100,1)
             st.markdown(f"You have chosen to deposit **{d_perc}%**.")
 
         # i = Monthly interest rate
