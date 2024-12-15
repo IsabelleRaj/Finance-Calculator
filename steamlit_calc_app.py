@@ -34,21 +34,25 @@ with st.container(border = True):
         # Display the repayment equation if toggle is on
         if st.toggle("Display formula"):
             st.latex(r"""
-                    \text{Monthly Repayment} = \frac{i \cdot P}{1 - (1 + i)^{-n}}
+                    \text{Monthly Repayment} = \frac{i \cdot (P - (P \cdot d)}{1 - (1 + i)^{-n}}
             """)
             st.markdown("""
                     Where:
-                    - _P_ = Loan amount (house price minus any deposit)
-                    - _i_ = Monthly interest rate (annual interest rate divided by 12)
+                    - _P_ = Principal amount
+                    - _d_ = Deposit amount (%)
+                    - _i_ = Monthly interest rate (%) (annual interest rate divided by 12)
                     - _n_ = Number of months for repayment (years divded by 12)
             """)
 
         # Input fields for the mortgage calculator
-        # P = Present value of the house
+        # P = Principle amount
         P = st.number_input("Enter the present value of the house (£):", min_value = 0.00, format = "%0.2f", step = 100.00)
-        
+
+        # d = Deposit amount (%)
+        d = st.number_input("Enter your deposit amount (%)", min_value = 0.00, max_value = 100.00, format = "%0.2f")/100
+
         # i = Monthly interest rate
-        i = st.number_input("Enter your yearly interest rate (%):", min_value= 0.0, format = "%0.1f", step = 1.0)/100
+        i = st.number_input("Enter your yearly interest rate (%):", min_value= 0.00, format = "%0.2f", step = 1.00)/100
         i = i/12 # Convert from yearly to monthly rate
         
         # n = The number of months over which the bond will be repaid
@@ -58,7 +62,7 @@ with st.container(border = True):
         # Calculate monthly repayment
         if st.button("Calculate", type="primary"):
             try:
-                repayment = round((i * P) / (1 - (1 + i) ** -n), 2)
+                repayment = round((i * (P-(P*d))) / (1 - (1 + i) ** -n), 2)
                 st.markdown(f"Your monthly repayment is:")
                 st.subheader(f":white_check_mark: :green-background[£{repayment:.2f}]")
             except ZeroDivisionError:
@@ -92,7 +96,7 @@ with st.container(border = True):
         P = st.number_input("Enter the amount of money you are depositing (£):", min_value = 0.00, format = "%0.2f", step = 1.00)
         
         # r = yearly interest rate
-        r = st.number_input("Enter your yearly interest rate (%):", min_value= 0.0, format = "%0.1f", step = 1.0)/100
+        r = st.number_input("Enter your yearly interest rate (%):", min_value= 0.00, format = "%0.2f", step = 1.00)/100
         
         # t = The amount of years planned to invest
         t = st.number_input("Enter the amount of years you plan to invest:", min_value= 0.0, format = "%0.1f", step = 1.0)
