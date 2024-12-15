@@ -48,7 +48,7 @@ with st.container(border = True):
         P = st.number_input("Enter the present value of the house (£):", min_value = 0.00, format = "%0.2f", step = 100.00)
         
         # i = Monthly interest rate
-        i = st.number_input("Enter your yearly interest rate (%):", min_value= 0.0, format = "%0.1f", , step = 1.0)/100
+        i = st.number_input("Enter your yearly interest rate (%):", min_value= 0.0, format = "%0.1f", step = 1.0)/100
         i = i/12 # Convert from yearly to monthly rate
         
         # n = The number of months over which the bond will be repaid
