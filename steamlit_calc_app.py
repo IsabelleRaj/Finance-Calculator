@@ -34,12 +34,12 @@ with st.container(border = True):
         # Display the repayment equation if toggle is on
         if st.toggle("Display formula"):
             st.latex(r"""
-                    \text{Monthly Repayment} = \frac{i \cdot (P - (P \cdot d)}{1 - (1 + i)^{-n}}
+                    \text{Monthly Repayment} = \frac{i \cdot \left(P - d)\right)}{1 - (1 + i)^{-n}}
             """)
             st.markdown("""
                     Where:
                     - _P_ = Principal amount
-                    - _d_ = Deposit amount (%)
+                    - _d_ = Deposit amount (£)
                     - _i_ = Monthly interest rate (%) (annual interest rate divided by 12)
                     - _n_ = Number of months for repayment (years divded by 12)
             """)
@@ -48,8 +48,11 @@ with st.container(border = True):
         # P = Principle amount
         P = st.number_input("Enter the present value of the house (£):", min_value = 0.00, format = "%0.2f", step = 100.00)
 
-        # d = Deposit amount (%)
-        d = st.number_input("Enter your deposit amount (%)", min_value = 0.00, max_value = 100.00, format = "%0.2f")/100
+        # d = Deposit amount (£)
+        d = st.number_input("Enter your deposit amount (£)", min_value = 0.00, format = "%0.2f", step = 100.00)
+        # Display the deposit amount as a percentage
+        d_perc = (d/P)* 100
+        st.markdown(f"You have chosen to deposit **{d_perc}%**.")
 
         # i = Monthly interest rate
         i = st.number_input("Enter your yearly interest rate (%):", min_value= 0.00, format = "%0.2f", step = 1.00)/100
@@ -62,7 +65,7 @@ with st.container(border = True):
         # Calculate monthly repayment
         if st.button("Calculate", type="primary"):
             try:
-                repayment = round((i * (P-(P*d))) / (1 - (1 + i) ** -n), 2)
+                repayment = round((i * (P-d)) / (1 - (1 + i) ** -n), 2)
                 st.markdown(f"Your monthly repayment is:")
                 st.subheader(f":white_check_mark: :green-background[£{repayment:.2f}]")
             except ZeroDivisionError:
@@ -87,7 +90,7 @@ with st.container(border = True):
                 st.markdown("""
                         Where: 
                         - _P_ = Initial deposit (principal amount)  
-                        - _r_ = Annual interest rate (in decimal form)  
+                        - _r_ = Annual interest rate (%)  
                         - _t_ = Number of years the money is invested  
                 """)
 
