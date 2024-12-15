@@ -38,7 +38,7 @@ with st.container(border = True):
             """)
             st.markdown("""
                     Where:
-                    - _P_ = Principal amount
+                    - _P_ = Principal amount (£)
                     - _d_ = Deposit amount (£)
                     - _i_ = Monthly interest rate (%) (annual interest rate divided by 12)
                     - _n_ = Number of months for repayment (years divded by 12)
@@ -90,7 +90,7 @@ with st.container(border = True):
                 
                 st.markdown("""
                         Where: 
-                        - _P_ = Initial deposit (principal amount)  
+                        - _P_ = Initial deposit (principal amount) (£)  
                         - _r_ = Annual interest rate (%)  
                         - _t_ = Number of years the money is invested  
                 """)
